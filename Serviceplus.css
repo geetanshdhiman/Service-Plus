@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('Background.png'); /* Replace with the actual path to your wallpaper image */
+    background-size: cover; /* Make the image cover the whole background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Set the height to full viewport */
+    background-attachment: scroll; /* Ensure background moves when scrolling */
+    background-color: #DEE4FE;
+  }
+  
+nav {
+  width: 100%;
+  padding: 10px 0;
+  background: #CFD7FE; /* Changed background color to red */
+}
+
+.header {
+    display: flex;            /* Enable flexbox layout */
+    flex-direction: column;   /* Stack the headings vertically */
+    align-items: flex-start;  /* Align the text to the left */
+    margin-left: 10%;         /* Adds space from the left edge */
+    padding: 20px 0;          /* Adds padding around the container */
+}
+
+.header h1 {
+    color: #1D2647;           /* Set text color */
+    font-size: 65px;        /* Adjust the font size */
+    line-height: 1.2;         /* Line spacing between the lines */
+    font-weight: 600;         /* Bold font */
+    margin: 0;                /* Remove default margin */
+    padding-bottom: 1px;     /* Add spacing between the two headings */
+}
+
+/* Login button css start from here */ 
+button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 7px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #31344b;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 90%;
+  min-width: 100px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: #CFD7FE;
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.header h1:first-child {
+    font-size: x-large;        /* Slightly smaller size for the first heading */
+    font-weight: 700;         /* More emphasis on the first heading */
+}
+.logo {
+    display: inline-block;           /* Keeps the logo inline with other elements */
+    position: absolute;              /* Allows precise positioning */
+    top: 0;                          /* Align the logo to the top */
+    left: 0;                         /* Align the logo to the left */
+    margin: 5px;                    /* Adds some space around the logo */
+}
+
+.logo img {
+    height: 86px;                    /* Adjust the logo's height */
+    width: auto;                     /* Keep aspect ratio */
+    object-fit: contain;             /* Ensure the logo fits within its dimensions */
+}
+
+nav .menu {
+    max-width: 12000px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.menu .logo a {
+  font-size: 32px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #31344b;
+  margin-right: auto; /* Ensures the logo stays on the left */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Align menu items to the right */
+}
+
+.menu ul a {
+  margin: 13px 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #31344b;
+  font-weight: 400;
+  display: inline-flex;
+  align-content: center;
+  padding: 10px 12px;
+  /* box-shadow: -3px -3px 7px #ffffff,
+              3px 3px 5px #ceced1; */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.menu ul a:hover:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  right: 150%;
+  bottom: 0;
+  box-shadow: inset -3px -3px 7px #ffffff,
+              inset 3px 3px 5px #ceced1;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown .dropbtn {
+    color: #31344b;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    /* box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1; */
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ecf0f3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content a {
+    color: #31344b;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+.menu ul a:hover {
+  color: #ffffff;
+  background-color: #1D2647;
+  border-radius: 11px;
+}
+
+nav label.btn {
+  color: #31344b;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+}
+
+nav label.cancel {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .menu ul {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: 100%; /* Changed from left to right for right-aligned menu */
+    width: 100%;
+    max-width: 400px;
+    padding-top: 45px;
+    height: 100%;
+    background: #ecf0f3;
+    box-shadow: 0 5px 10px #b0b0b5;
+    z-index: 12;
+    transition: all 0.3s ease;
+  }
+
+  .menu ul a {
+    display: block;
+    font-size: 23px;
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: none;
+    text-align: center;
+  }
+
+  .menu ul a:hover:before {
+    box-shadow: none;
+  }
+
+  nav label.bars {
+    display: block;
+    position: absolute;
+    right: 20px; /* Placed the hamburger icon on the top-right corner */
+  }
+
+  #check:checked ~ label.bars {
+    display: none;
+  }
+
+  #check:checked ~ ul label.cancel {
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    right: 0; /* Show the menu from the right */
+  }
+}
+
+.splogo {
+    position: absolute; /* Position the logo relative to the viewport */
+    top: 20%; /* Adjust this value to move the logo vertically */
+    left: 20px; /* Adjust this to move the logo horizontally (left side) */
+    z-index: 2; /* Ensure the logo is above background elements */
+}
+
+.splogo img {
+    height: 80px; /* Adjust the height of the logo */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within its dimensions without distortion */
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* Flexbox container for text and image layout */
+.container {
+  display: flex;
+  justify-content: space-between; /* Ensure space between text and image */
+  align-items: center; /* Vertically align content */
+  padding: 114px 12px; /* Add padding around the container */
+  /* background-color: #f9f9f9; Optional background color*/
+  margin: 12px;
+} 
+
+/* Styling for the text */
+.About {
+  flex: 1; /* Text takes up available space */
+  padding-right: 28px; /* Space between text and image */
+  padding-top: 91px; /* Move the text down */
+  text-align: left; /* Align text to the left */
+}
+
+.About h1 {
+  font-size: 26px; /* Adjust the text size */
+  line-height: 1.5; /* Improve readability */
+  margin: 0 0 15px 0; /* Add margin-bottom for space between h1 and h2 */
+  color: #fff; /* Text color */
+  padding-left: 7px; /* Move the text to the right */
+}
+
+.About h2 {
+  font-size: 26px; /* Adjust the text size */
+  line-height: 1.5; /* Improve readability */
+  margin: 0; /* Remove default margin */
+  color: #fff; /* Text color */
+  padding-left: 7px; /* Move the text to the right */
+}
+
+.highlight {
+  color: rgb(0, 0, 0); /* Change the color to whatever you want */
+}
+
+
+/* Styling for the image */
+.image img {
+  max-width: 585px; /* Adjust the image size */
+  height: auto; /* Keep aspect ratio */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack text and image vertically on smaller screens */
+    text-align: center; /* Center align on mobile */
+  }
+  
+  .image img {
+    margin-top: 20px; /* Add space between text and image */
+  }
+}
+
+
+/* ------------------------------------------------------------*/
+
+
+/* Scrollable section with full screen height */
+.service-section {
+  display: flex; /* Use flexbox to align content horizontally */
+  justify-content: space-between; /* Add space between the text and image */
+  align-items: center; /* Vertically center the items */
+  padding: 20px;
+  background-color: #DFE1FF; /* Add a light background if needed */
+  margin-top: -100px; /* Move the section upwards by 20px */
+}
+
+/* Styling for the text */
+.text-content {
+  flex: 1; /* Make the text take available space */
+  text-align: left; /* Align the text to the left */
+}
+
+.text-content h1 {
+  font-size: 115px; /* Adjust the font size */
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Philosopher', sans-serif; /* Optional: Use Philosopher font */
+  color: #0A1E7D;
+}
+
+/* Styling for the image */
+.image-content img {
+  max-width: 440px; /* Adjust image size as needed */
+  height: auto; /* Maintain aspect ratio */
+  transform: scaleX(-1); /* Flip the image horizontally */
+  margin-top: auto;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .service-section {
+      flex-direction: column; /* Stack text and image vertically on small screens */
+      text-align: center;
+  }
+
+  .image-content img {
+      margin-top: 20px; /* Add space between text and image */
+      max-width: 100%; /* Ensure image scales down on smaller screens */
+  }
+}
+
+/* Cards Section start from here ___________---------- */
+
+/* Card container */
+.card {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Optional: Space out the cards evenly */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  background: linear-gradient(135deg, #708EEE, #8394ED);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
+  overflow: hidden;
+  max-width: 300px; /* Adjust the card width */
+  margin: 20px; /* Add some space around the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Style the horizontal line */
+.card-content hr {
+  border: 0;
+  border-top: 1px solid #ffffff; /* Color and thickness of the line */
+  margin: 10px 0; /* Space around the line */
+  width: 100%; /* Make it span the full width */
+}
+
+/* Optional: Add hover effect for the button */
+.card-btn:hover {
+  background-color: #a0b0f0;
+}
+
+
+/* Card container */
+.card {
+  background: linear-gradient(135deg, #708EEE, #8394ED);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 250px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px; /* Adjust height of the card */
+}
+
+/* Card content area with fixed height and scroll */
+.card-content {
+  padding: 15px;
+  max-height: 150px; 
+  overflow-y: auto;
+}
+
+/* Title with underline - sticky */
+.card-title {
+  font-size: 23px;
+  font-weight: bold;
+  margin:-1px -13px 0px -10px;
+  color: #8394ED;
+  border-bottom: 2px solid #ffffff;
+  border-left: 35px solid #8394ED;
+  padding-bottom: 5px;
+  position: sticky;
+  top: 0; /* Stick to the top */
+  background-color: #708EEE; /* Same background color as the card */
+  z-index: 1; /* Ensure it stays on top of content */
+}
+
+/* Scrollbar styling for the content */
+.card-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background-color: #8394ED;
+  border-radius: 4px;
+}
+
+
+/* Image inside the card */
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block; /* Full-width image */
+}
+
+/* Card content area with fixed height and scroll */
+.card-content {
+  padding: 1px;
+  max-height: 350px; /* Set max height for content */
+  overflow-y: auto; /* Enable vertical scroll when content overflows */
+  background-color:  #8394ED;
+  ; /* Optional: Set background color */
+  position: relative; /* Ensure content can scroll below the fixed title */
+}
+
+/* Title with underline that stays fixed at the top of the card */
+.card-title {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0; /* Remove extra margin */
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff; /* Add underline */
+  padding-bottom: 5px; /* Space between text and underline */
+  padding-top: 10px; /* Space at the top for better design */
+  background-color:  #8394ED;
+  ; /* Optional: Background color for better contrast */
+  position: sticky; /* Use sticky positioning to fix the title while scrolling */
+  top: 0; /* Stick to the top of the card when scrolling */
+  z-index: 10; /* Ensure the title stays on top of scrolling content */
+}
+
+
+/* Scrollbar styling for the content */
+.card-content::-webkit-scrollbar {
+  width: 10px; /* Slightly wider scrollbar */
+}
+
+/* Scrollbar track (background) */
+.card-content::-webkit-scrollbar-track {
+  background: #111; /* Light background for the scrollbar track */
+  border-radius: 5px; /* Rounded edges */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Inner shadow for the scrollbar track */
+  margin: 15px; /* Add some space around the track */
+}
+
+/* Scrollbar thumb (the scroll handle) */
+.card-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0A1E7D, #8394ED); /* Gradient for the scrollbar thumb */
+  border-radius: 5px; /* Rounded edges for the thumb */
+  box-shadow: inset 0 0 5px rgb(255, 0, 0); /* Inner shadow for a more 3D effect */
+}
+
+/* Scrollbar thumb hover effect */
+.card-content::-webkit-scrollbar-thumb:hover {
+  background-color: #8394ED; /* Slightly lighter shade on hover */
+}
+
+/* Scrollbar track hover effect */
+.card-content::-webkit-scrollbar-track:hover {
+  background: #e0e0e0; /* Darken the track slightly on hover */
+}
+
+
+.card-content::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Background of the scrollbar track */
+}
+
+/* Card description */
+.card-description {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 10px 0px;
+  line-height: 1.5;
+}
+
+/* Button on the card */
+.card-btn {
+  display: inline-block;
+  padding: 7px 19px;
+  background-color: #DEE4FE;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 134px; /* Button width */
+  margin-left: auto; /* Push the button to the right */
+}
+
+
+
+/* Hover effect for the button */
+.card-btn:hover {
+  background-color: #ffffff;
+}
+
+/* Hover effect for the card */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgb(255, 255, 255);
+}
+
+/* Card container */
+.card {
+  background: linear-gradient(135deg, #708EEE, #8394ED);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px; /* Adjust height of the card */
+}
+
+/* Card content area with fixed height and scroll */
+.card-content {
+  padding: 15px;
+  max-height: 150px; 
+  overflow-y: auto;
+}
+
+/* Title with underline - sticky */
+.card-title {
+  font-size: 23px;
+  font-weight: bold;
+  margin:-1px -13px 0px -10px;
+  color: #8394ED;
+
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5px;
+  position: sticky;
+  top: 0; /* Stick to the top */
+  background-color: #708EEE; /* Same background color as the card */
+  z-index: 1; /* Ensure it stays on top of content */
+}
+
+/* Scrollbar styling for the content */
+.card-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background-color: #8394ED;
+  border-radius: 4px;
+}
+
+
+/* Image inside the card */
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block; /* Full-width image */
+}
+
+/* Card content area with fixed height and scroll */
+.card-content {
+  padding: 1px;
+  max-height: 350px; /* Set max height for content */
+  overflow-y: auto; /* Enable vertical scroll when content overflows */
+  background-color:  #8394ED;
+  ; /* Optional: Set background color */
+  position: relative; /* Ensure content can scroll below the fixed title */
+}
+
+/* Title with underline that stays fixed at the top of the card */
+.card-title {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0; /* Remove extra margin */
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff; /* Add underline */
+  padding-bottom: 5px; /* Space between text and underline */
+  padding-top: 10px; /* Space at the top for better design */
+  background-color:  #8394ED;
+  ; /* Optional: Background color for better contrast */
+  position: sticky; /* Use sticky positioning to fix the title while scrolling */
+  top: 0; /* Stick to the top of the card when scrolling */
+  z-index: 10; /* Ensure the title stays on top of scrolling content */
+}
+
+
+/* Scrollbar styling for the content */
+.card-content::-webkit-scrollbar {
+  width: 10px; /* Slightly wider scrollbar */
+}
+
+/* Scrollbar track (background) */
+.card-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light background for the scrollbar track */
+  border-radius: 5px; /* Rounded edges */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Inner shadow for the scrollbar track */
+  margin: 15px; /* Add some space around the track */
+}
+
+/* Scrollbar thumb (the scroll handle) */
+.card-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0A1E7D, #8394ED); /* Gradient for the scrollbar thumb */
+  border-radius: 5px; /* Rounded edges for the thumb */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Inner shadow for a more 3D effect */
+}
+
+/* Scrollbar thumb hover effect */
+.card-content::-webkit-scrollbar-thumb:hover {
+  background-color: #8394ED; /* Slightly lighter shade on hover */
+}
+
+/* Scrollbar track hover effect */
+.card-content::-webkit-scrollbar-track:hover {
+  background: #e0e0e0; /* Darken the track slightly on hover */
+}
+
+
+.card-content::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Background of the scrollbar track */
+}
+
+/* Card description */
+.card-description {
+  font-size: 17px;
+  color: #ffffff;
+  margin: 10px 10px;
+  line-height: 1.5;
+}
+
+/* Button on the card */
+.card-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #DEE4FE;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-content: center;
+  justify-content: center; /* Align button to the right */
+  flex-wrap: wrap;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Hover effect for the button */
+.card-btn:hover {
+  background-color: #ffffff;
+}
+
+/* Hover effect for the card */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+

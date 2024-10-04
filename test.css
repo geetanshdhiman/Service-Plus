@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .registration-box {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .registration-box h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .registration-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .registration-box label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  .registration-box input, .registration-box select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .registration-box input:focus, .registration-box select:focus {
+    border-color: #708EEE;
+    outline: none;
+  }
+  
+  .registration-box .note {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .registration-box .terms {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .registration-box .terms input {
+    margin-right: 10px;
+  }
+  
+  .registration-box .submit-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .registration-box .submit-btn:hover {
+    background-color: #45a049;
+  }
+  

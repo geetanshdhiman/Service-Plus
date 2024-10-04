@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <h2>REGISTRATION</h2>
+            <div class="input-field">
+                <input type="text" required>
+                <label>Full Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" required>
+                <label>Email Id</label>
+            </div>
+            <div class="input-field">
+                <input type="tel" id="mobile-number" maxlength="10" pattern="\d*" required>
+                <label>Mobile Number</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required>
+                <label>password</label>
+             </div>
+             <h1 style=" font-size: 14px; /* Small font size */
+                color: #Bc3545; /* Change font color */
+                text-align: left; /* Center the heading */
+                font-family: 'Arial', sans-serif; /* Optional: Change font family */
+                font-weight: normal; /* Optional: Change font weight */
+                margin-bottom: 15px; /* Optional: Add some space below the heading */">Note: Password should be at least '9' characters with at least one special character(!@#$%^&*), one
+                    numeric, one small case and one upper case letter (i.e ADmin@357)</h1>
+
+                    <!-- Checkbox Section for Terms of Use -->
+                    <div class="terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to abide by the Terms of Use outlined by ServicePlus.</label>
+                    </div>
+
+            <button type="submit">Log In</button>
+            <script>
+                document.getElementById('mobile-number').addEventListener('input', function (e) {
+                    this.value = this.value.replace(/\D/g, ''); // Replace any non-digit characters
+                });
+            </script>
+</body>
+
+</html>

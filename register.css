@@ -1,0 +1,280 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+    background-color: #DEE4FE;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background-color:#0A1E7D; /* Red background */
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end; /* Align the Register button to the right */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    
+}
+/* h4 Styling in Navbar */
+.navbar h4 {
+    color: white; /* White text color */
+    font-size: 18px; /* Adjust the font size */
+    margin: 10; /* Remove any default margin */
+    font-weight: 400; /* Slightly lighter font weight */
+    font-family: 'Arial', sans-serif; /* Change font to Arial or any preferred font */
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Take up the available space on the left side */
+    display: flex;
+    justify-content: flex-start; /* Center-align the text vertically */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+/* Container for buttons */
+.navbar-buttons {
+    display: flex; /* Align buttons horizontally */
+    gap: 15px; /* Space between buttons */
+}
+
+/* Common styles for the buttons */
+.navbar-buttons a {
+    display: inline-block;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    padding: 10px 20px; /* Padding inside the buttons */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the buttons */
+.navbar-buttons a:hover {
+    background-color: #000000; /* Light grey background on hover */
+    color: #007BFF; /* Blue text on hover */
+}
+
+
+
+/* Background image and blur effect */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('Background.png');
+    background-position: center;
+    background-size: cover;
+    filter: blur(1px); /* Adjust the value for more or less blur */
+    z-index: -1; /* Ensure this is behind other content */
+}
+
+/* Wrapper for the login form */
+.wrapper {
+    width: 550px;
+    border-radius: 30px;
+    padding: 30px;
+    text-align: center;
+    border: 7px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: absolute; /* Use absolute positioning */
+    right: 160px; /* Align it to the right */
+    top: 110px; /* Adjust this based on how far from the top you want the form */
+}
+
+/* Fullscreen positioning for the image */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    height: 100vh; /* Full screen height */
+    width: 100%; /* Full screen width */
+}
+
+.login-image {
+    width: 50%; /* Adjust width as needed */
+}
+
+.login-image img {
+    display: block;
+    width: 100%; /* Fill the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Keep aspect ratio while covering the container */
+}
+
+
+
+
+
+/* Login Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+}
+
+.input-field input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #000000;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
+
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: #fff;
+}
+
+#remember {
+    accent-color: #fff;
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+}
+
+.forget label p {
+    margin-left: 8px;
+}
+
+.wrapper a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: #708EEE;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    color: #000000;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+
+/* footer css start  from here */
+
+/* Footer Styling */
+.footer {
+    background-color: #0A1E7D;
+    color: white;
+    padding: 0px; /* Increased padding for a better look */
+    text-align: center;
+    position: fixed; /* Fix the footer to the bottom */
+    bottom: 0; /* Align it to the bottom of the screen */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+
+.footer-content p {
+    margin: 10px 0; /* Space between paragraphs */
+    font-size: 16px; /* Font size for the text */
+}
+
+.footer a {
+    color: white; /* Link color */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Horizontal lines in the center */
+.footer-lines {
+    width: 80%; /* Line width */
+    height: 1px; /* Line thickness */
+    background-color: white; /* Line color */
+    margin: 10px auto; /* Center the lines */
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Add some spacing below */
+  }
+  
+  .terms input[type="checkbox"] {
+    margin-right: 10px; /* Space between the checkbox and label */
+  }
+  
+  .terms label {
+    font-size: 16px; /* Make the text bigger */
+    color: #000000; /* Change the color to a green shade */
+    font-family: 'Arial', sans-serif; /* Optional: Change font family */
+  }
+  
